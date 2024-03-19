@@ -1,1 +1,96 @@
 @charset "UTF-8";
+
+@font-face {
+    font-family: 'nec';
+    src: url('../fonts/nectarine.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Display:wght@100..900&display=swap');
+
+
+:root{
+    --clara: RGB(227,227,219);
+    --escura: #301046;
+    --cor1: #E8BE7E;
+    --cor3: #D9D9D9;
+    --cor4: #959B7D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: "Big Shoulders Inline Display", sans-serif;
+}
+
+h1 {
+    font-family: 'nec', sans-serif;
+    font-size: 2.8rem;
+    color: var(--escura);
+    padding-top: 12px;
+}
+.main-bg {
+    background-image: url(../img/main.svg);
+    background-size: cover;
+    background-position: center center;
+    color: var(--clara);
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section {
+    width: 100vh;
+}
+
+.menu {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    
+}
+.menu-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+    
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    
+}
+
+.menu ul li a{
+
+    display: block;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: var(--escura);
+}
+
+#logo {
+    width: 45px;
+}
+div#esquerda {
+    display: flex;
+    align-items: center;
+}
