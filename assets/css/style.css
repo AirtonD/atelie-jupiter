@@ -1,15 +1,13 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,100..900&display=swap');
+
 @font-face {
     font-family: 'nec';
     src: url('../fonts/nectarine.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
-
-
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Display:wght@100..900&display=swap');
-
 
 :root{
     --clara: RGB(227,227,219);
@@ -30,12 +28,12 @@ a {
 }
 
 body {
-    font-family: "Big Shoulders Inline Display", sans-serif;
+    font-family: "Truculenta", sans-serif;
 }
 
 h1 {
     font-family: 'nec', sans-serif;
-    font-size: 2.8rem;
+    font-size: 2rem;
     color: var(--escura);
     padding-top: 12px;
 }
@@ -46,13 +44,17 @@ h1 {
     color: var(--clara);
 }
 
+.white-bg {
+    background: white;
+}
+
 .main-content {
     max-width: 1200px;
     margin: auto;
 }
 
 .section {
-    width: 100vh;
+    min-height: 100vh;
 }
 
 .menu {
@@ -62,6 +64,7 @@ h1 {
     left: 0;
     right: 0;
     width: 100%;
+    border-bottom: 1px solid var(--cor3);
     
 }
 .menu-content {
@@ -76,6 +79,7 @@ h1 {
 .menu ul {
     list-style: none;
     display: flex;
+    font-weight: 400;
     
 }
 
@@ -83,14 +87,34 @@ h1 {
 
     display: block;
     padding: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.3em;
     color: var(--escura);
+    position: relative;
 }
 
+.menu ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    width: 0;
+    height: 0.2rem;
+    background-color: var(--cor1);
+    transition: all 300ms ease-in-out;
+}
+
+.menu ul li a:hover::after{
+    width: 50%;
+    left: 25%;
+}
 #logo {
     width: 45px;
 }
 div#esquerda {
     display: flex;
     align-items: center;
+}
+
+.menu-spacing{
+    height: 65px;
 }
