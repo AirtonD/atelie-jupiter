@@ -29,9 +29,13 @@ a {
     color: inherit;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Truculenta", sans-serif;
-    font-size: 1.2em;
+    font-size: 1.4em;
 }
 
 h1 {
@@ -39,6 +43,17 @@ h1 {
     font-size: 2rem;
     color: var(--escura);
     padding-top: 12px;
+}
+
+h2 {
+    font-size: 5rem;
+    line-height: 1em;
+    margin-bottom: 3rem;
+    font-family: "Madimi One", sans-serif;
+    text-transform: uppercase;
+}
+p {
+    margin-bottom: 3rem;
 }
 .main-bg {
     background-image: url(../img/main.svg);
@@ -54,6 +69,7 @@ h1 {
 .main-content {
     max-width: 1200px;
     margin: auto;
+    padding: 8rem var(--gap);
 }
 
 .section {
@@ -91,9 +107,9 @@ h1 {
 
     display: block;
     padding: 1rem;
-    font-size: 1.3em;
     color: var(--escura);
     position: relative;
+    font-weight: 600;
 }
 
 .menu ul li a::after {
@@ -129,7 +145,7 @@ div#esquerda {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--gap);
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .intro-text-content, .intro-img {
@@ -138,15 +154,86 @@ div#esquerda {
     justify-content: center;
 }
 
-.intro-text-content h2 {
-    font-size: 5rem;
-    line-height: 1em;
-    margin-bottom: 3rem;
-    font-family: "Madimi One", sans-serif;
-    text-transform: uppercase;
+.intro-text-content p {
+    font-size: 1.4rem;
 }
 
 .intro-img img {
-    max-width: 100%;
+    width: 279px;
     height:auto;
 }
+
+.sobrenos-content {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    min-height: 100vh;
+    max-width: 64rem;
+    text-align: center;
+}
+
+.sobrenos-content h2 {
+    text-transform: none;
+    color: var(--escura);
+}
+
+.grid-one-content{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    height: 100vh;
+}
+
+.grid-main-heading {
+    margin-bottom: 1rem;
+}
+
+.grid-main-desc{
+    margin-bottom: 7rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+    counter-reset: grid-counter;
+}
+
+.grid h3 {
+    font-size: 3rem;
+    position: relative;
+    padding-left: 4rem;
+    padding-bottom: 1rem;
+}
+
+.grid h3::before {
+    counter-increment: grid-counter;
+    content: counter(grid-counter);
+    position: absolute;
+    font-size: 6rem;
+    font-style: italic;
+    top: -2rem;
+    left: 0;
+    transform: rotate(5deg);
+}
+
+.grid-img { 
+    justify-content: center;
+    height: 100vh;
+}
+
+.gallery-img {
+    width: 100%;
+    max-width: 36rem;
+    max-height: 36rem;
+    overflow: hidden;
+}
+
+.gallery-img img {
+    transition: all 300ms ease-in-out;
+}
+
+.gallery-img img:hover{
+    transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
+}
+
