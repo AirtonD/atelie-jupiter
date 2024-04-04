@@ -9,6 +9,10 @@
 </head>
 
 <body>
+
+<input id="close-menu" class="close-menu" type="checkbox" aria-label="Close menu" role="button">
+<label class="close-menu-label" for="close-menu" title="colse menu"></label>
+
     <aside class="menu">       
         <div  class="main-content menu-content">
         <div id="esquerda">
@@ -16,11 +20,11 @@
             <h1><a href="index.html">Atelie Jupiter</a></h1>
         </div>
         <nav>
-            <ul>
+            <ul onclick="getElementById('close-menu').checked = false;">
             <li><a href="#sobrenos">Sobre nós</a></li>
             <li><a href="#processo">Processo</a></li>
             <li><a href="#galeria">Galeria</a></li>
-            <li><a href="#">Contato</a></li>
+            <li><a href="#contact">Contato</a></li>
             <li><a href="#">Encomende agora!</a></li>
         </ul>
         </nav>
@@ -95,5 +99,47 @@
         </div>
         </div>
     </section>
+    <section id="contact" class="intro section main-bg">
+        <div class="main-content intro-content">
+        <div class="intro-text-content">
+        <h2>Peças totalmente personalizáveis!</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt, rerum. Cupiditate accusamus error eligendi officia voluptate minima tempora consequatur aut magni accusantium molestias perferendis, ducimus non. Quam totam suscipit veniam.</p>
+    </div>
+    <div class="intro-img">
+        <img src="assets/img/contact.svg" alt="contact us">
+    </div>
+    <div class="contact-form">
+        <fieldset class="form-grid">
+            <legend>Contact me</legend>
+
+            <div class="form-group">
+                <label for="fist-name">Primeiro Nome:</label>
+                <input type="text" name="first-name" id="ifirst=name" placeholder="Seu nome">
+            </div>
+            <div class="form-group">
+                <label for="last-name">Último Nome:</label>
+                <input type="text" name="last-name" id="ilast=name" placeholder="Seu sobrenome">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="iemail" placeholder="Seu e-mail">
+            </div>
+            <div class="form-group full-width">
+                <label for="message">Mensagem:</label>
+                <textarea name="message" id="imassage" cols="30" rows="10" placeholder="Sua mensagem"></textarea>
+            </div>
+
+            <div class="form-group full-width">
+                <button type="submit">Enviar</button>
+            </div>
+        </fieldset>
+    </div>
+    </div>
+    </section>
+
+    <footer id="footer" class="footer white-bg">
+        <p>Feito por Airton</p>
+    </footer>
+<a class="back-to-top" href="#">&#11165</a>
 </body>
 </html>
