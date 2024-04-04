@@ -360,7 +360,7 @@ body .full-width {
         width: 70vw;
         display: block;
     }
-    .intro-content .intro-text-content h2 {
+    h2 {
         font-size: 2rem;
     }
     .intro-img {
@@ -414,7 +414,5 @@ body .full-width {
     #contact img {
         display: none;
     }
-    .section {
-        height: 100vh;
-    }
+
 }
