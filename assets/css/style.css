@@ -414,5 +414,7 @@ body .full-width {
     #contact img {
         display: none;
     }
-
+    .section {
+        height: 100vh;
+    }
 }
